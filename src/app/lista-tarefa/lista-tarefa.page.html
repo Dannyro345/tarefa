@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ListaTarefa</ion-title>
+    <ion-title>Listagem de Tarefas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let tarefa of tarefas">
+    <img src="{{tarefa.avatar}}" alt="Avatar">
+    <ion-card-header>
+      <ion-card-title>{{tarefa.nome}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-header>
+      <ion-card-title>{{tarefa.horario}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>
 
+
+      <ion-item-option color="light" (click)="remove(tarefa)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-item-option>
+
+    </ion-item>
+  </ion-card>
+  <ion-fab (click)="modal()" class="button-native" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

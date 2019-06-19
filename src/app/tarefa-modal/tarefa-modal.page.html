@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nome: </ion-label>
+        <ion-input [(ngModel)]="tarefa.nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Horario: </ion-label>
+        <ion-input [(ngModel)]="tarefa.horario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <img src="{{tarefa.avatar}}" alt="">
+        <ion-button (click)="take_picture()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-button expanded="full" (click)="add()">Vai</ion-button>
+        <ion-button expanded="full" href='/home'>voltar</ion-button>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
